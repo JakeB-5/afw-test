@@ -1,0 +1,169 @@
+/* Light Theme (Default) */
+:root,
+[data-theme='light'] {
+  /* Background colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e8e8e8;
+  --bg-calculator: #ffffff;
+
+  /* Text colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #717171;
+  --text-display: #000000;
+
+  /* Button colors */
+  --btn-number-bg: #f0f0f0;
+  --btn-number-hover: #e0e0e0;
+  --btn-number-active: #d0d0d0;
+  --btn-number-text: #1a1a1a;
+
+  --btn-operator-bg: #ff9500;
+  --btn-operator-hover: #e88600;
+  --btn-operator-active: #cc7600;
+  --btn-operator-text: #ffffff;
+
+  --btn-function-bg: #d4d4d2;
+  --btn-function-hover: #c4c4c2;
+  --btn-function-active: #b4b4b2;
+  --btn-function-text: #1a1a1a;
+
+  --btn-scientific-bg: #6b6b6b;
+  --btn-scientific-hover: #5b5b5b;
+  --btn-scientific-active: #4b4b4b;
+  --btn-scientific-text: #ffffff;
+
+  --btn-equals-bg: #007aff;
+  --btn-equals-hover: #0066cc;
+  --btn-equals-active: #0055aa;
+  --btn-equals-text: #ffffff;
+
+  /* Accent colors */
+  --accent-primary: #007aff;
+  --accent-secondary: #5856d6;
+  --accent-success: #34c759;
+  --accent-warning: #ff9500;
+  --accent-error: #ff3b30;
+
+  /* Display */
+  --display-bg: #f8f8f8;
+  --display-border: #e0e0e0;
+
+  /* History panel */
+  --history-bg: #fafafa;
+  --history-item-hover: #f0f0f0;
+  --history-border: #e0e0e0;
+
+  /* Misc */
+  --border-color: #e0e0e0;
+  --focus-ring: rgba(0, 122, 255, 0.5);
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  /* Background colors */
+  --bg-primary: #1c1c1e;
+  --bg-secondary: #2c2c2e;
+  --bg-tertiary: #3a3a3c;
+  --bg-calculator: #1c1c1e;
+
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: #ebebf5;
+  --text-muted: #8e8e93;
+  --text-display: #ffffff;
+
+  /* Button colors */
+  --btn-number-bg: #505050;
+  --btn-number-hover: #606060;
+  --btn-number-active: #707070;
+  --btn-number-text: #ffffff;
+
+  --btn-operator-bg: #ff9f0a;
+  --btn-operator-hover: #ffb340;
+  --btn-operator-active: #ffc760;
+  --btn-operator-text: #ffffff;
+
+  --btn-function-bg: #a5a5a5;
+  --btn-function-hover: #b5b5b5;
+  --btn-function-active: #c5c5c5;
+  --btn-function-text: #1a1a1a;
+
+  --btn-scientific-bg: #3a3a3c;
+  --btn-scientific-hover: #4a4a4c;
+  --btn-scientific-active: #5a5a5c;
+  --btn-scientific-text: #ffffff;
+
+  --btn-equals-bg: #0a84ff;
+  --btn-equals-hover: #409cff;
+  --btn-equals-active: #64b5ff;
+  --btn-equals-text: #ffffff;
+
+  /* Accent colors */
+  --accent-primary: #0a84ff;
+  --accent-secondary: #5e5ce6;
+  --accent-success: #30d158;
+  --accent-warning: #ff9f0a;
+  --accent-error: #ff453a;
+
+  /* Display */
+  --display-bg: #2c2c2e;
+  --display-border: #3a3a3c;
+
+  /* History panel */
+  --history-bg: #2c2c2e;
+  --history-item-hover: #3a3a3c;
+  --history-border: #3a3a3c;
+
+  /* Misc */
+  --border-color: #3a3a3c;
+  --focus-ring: rgba(10, 132, 255, 0.5);
+}
+
+/* System preference detection */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    /* Apply dark theme variables when system prefers dark and no explicit theme set */
+    --bg-primary: #1c1c1e;
+    --bg-secondary: #2c2c2e;
+    --bg-tertiary: #3a3a3c;
+    --bg-calculator: #1c1c1e;
+    --text-primary: #ffffff;
+    --text-secondary: #ebebf5;
+    --text-muted: #8e8e93;
+    --text-display: #ffffff;
+    --btn-number-bg: #505050;
+    --btn-number-hover: #606060;
+    --btn-number-active: #707070;
+    --btn-number-text: #ffffff;
+    --btn-operator-bg: #ff9f0a;
+    --btn-operator-hover: #ffb340;
+    --btn-operator-active: #ffc760;
+    --btn-operator-text: #ffffff;
+    --btn-function-bg: #a5a5a5;
+    --btn-function-hover: #b5b5b5;
+    --btn-function-active: #c5c5c5;
+    --btn-function-text: #1a1a1a;
+    --btn-scientific-bg: #3a3a3c;
+    --btn-scientific-hover: #4a4a4c;
+    --btn-scientific-active: #5a5a5c;
+    --btn-scientific-text: #ffffff;
+    --btn-equals-bg: #0a84ff;
+    --btn-equals-hover: #409cff;
+    --btn-equals-active: #64b5ff;
+    --btn-equals-text: #ffffff;
+    --accent-primary: #0a84ff;
+    --accent-secondary: #5e5ce6;
+    --accent-success: #30d158;
+    --accent-warning: #ff9f0a;
+    --accent-error: #ff453a;
+    --display-bg: #2c2c2e;
+    --display-border: #3a3a3c;
+    --history-bg: #2c2c2e;
+    --history-item-hover: #3a3a3c;
+    --history-border: #3a3a3c;
+    --border-color: #3a3a3c;
+    --focus-ring: rgba(10, 132, 255, 0.5);
+  }
+}
