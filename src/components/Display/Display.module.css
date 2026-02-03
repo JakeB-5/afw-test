@@ -1,0 +1,111 @@
+/* Display container */
+.container {
+  position: relative;
+  background-color: var(--display-bg);
+  border: 1px solid var(--display-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  min-height: var(--display-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+/* Angle mode indicator badge */
+.angleMode {
+  position: absolute;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  background-color: var(--btn-scientific-bg);
+  color: var(--btn-scientific-text);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  user-select: none;
+  transition: background-color var(--transition-fast);
+}
+
+/* Expression display - smaller text showing current calculation */
+.expression {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  text-align: right;
+  min-height: 1.5rem;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  padding-top: 1.5rem; /* Space for angle mode badge */
+  transition: color var(--transition-normal);
+}
+
+/* Main value display - large prominent number */
+.value {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-display);
+  font-weight: 300;
+  color: var(--text-display);
+  text-align: right;
+  line-height: 1.2;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  transition: color var(--transition-fast), font-size var(--transition-fast);
+  user-select: text; /* Allow selecting the value for copying */
+}
+
+/* Error state styling */
+.value.error {
+  color: var(--accent-error);
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-md);
+    min-height: 100px;
+  }
+
+  .expression {
+    font-size: var(--font-size-xs);
+    min-height: 1.25rem;
+  }
+
+  .value {
+    font-size: var(--font-size-2xl);
+  }
+
+  .angleMode {
+    font-size: 0.625rem;
+    padding: 0.125rem var(--spacing-xs);
+  }
+}
+
+/* Smooth font size transitions for long numbers */
+@media (prefers-reduced-motion: no-preference) {
+  .value {
+    transition: font-size var(--transition-normal), color var(--transition-fast);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .container {
+    border-width: 2px;
+  }
+
+  .angleMode {
+    border: 1px solid currentColor;
+  }
+}

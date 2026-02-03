@@ -1,0 +1,53 @@
+.themeToggle {
+  /* Reset button styles */
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  color: var(--text-color, #333);
+}
+
+.themeToggle:hover {
+  background-color: var(--hover-bg, rgba(0, 0, 0, 0.05));
+  border-color: var(--border-color, rgba(0, 0, 0, 0.1));
+}
+
+.themeToggle:focus {
+  outline: none;
+  border-color: var(--focus-color, #0066cc);
+  box-shadow: 0 0 0 3px var(--focus-shadow, rgba(0, 102, 204, 0.2));
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.themeToggle:hover .icon {
+  transform: rotate(15deg);
+}
+
+/* Dark mode overrides */
+[data-theme='dark'] .themeToggle {
+  color: var(--text-color-dark, #f0f0f0);
+}
+
+[data-theme='dark'] .themeToggle:hover {
+  background-color: var(--hover-bg-dark, rgba(255, 255, 255, 0.1));
+  border-color: var(--border-color-dark, rgba(255, 255, 255, 0.2));
+}
+
+[data-theme='dark'] .themeToggle:focus {
+  border-color: var(--focus-color-dark, #66b3ff);
+  box-shadow: 0 0 0 3px var(--focus-shadow-dark, rgba(102, 179, 255, 0.2));
+}

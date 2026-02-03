@@ -1,9 +1,14 @@
+import { ThemeProvider } from './context/ThemeContext';
+import Calculator from './components/Calculator';
+import './App.css';
+
 function App() {
   return (
-    <div>
-      <h1>Scientific Calculator</h1>
-      <p>Coming soon...</p>
-    </div>
+    <ThemeProvider>
+      <div className="app">
+        <Calculator />
+      </div>
+    </ThemeProvider>
   );
 }
 

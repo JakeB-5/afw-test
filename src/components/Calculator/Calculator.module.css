@@ -1,0 +1,95 @@
+/* Calculator component styles */
+
+.calculator {
+  --calc-width: 400px;
+
+  position: relative;
+  max-width: var(--calc-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  background-color: var(--bg-calculator);
+  box-shadow: var(--shadow-lg);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Theme toggle positioning */
+.themeToggleContainer {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 10;
+}
+
+/* History toggle positioning */
+.historyToggleContainer {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  z-index: 10;
+}
+
+.historyButton {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-md);
+  border: none;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.historyButton:hover {
+  background-color: var(--bg-hover);
+  transform: scale(1.05);
+}
+
+.historyButton:active {
+  transform: scale(0.95);
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 480px) {
+  .calculator {
+    --calc-width: 100%;
+    max-width: 100%;
+    padding: var(--spacing-md);
+    border-radius: 0;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+
+  .themeToggleContainer {
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+  }
+
+  .historyToggleContainer {
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+  }
+
+  .historyButton {
+    width: 36px;
+    height: 36px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  .calculator {
+    max-width: 90%;
+  }
+}

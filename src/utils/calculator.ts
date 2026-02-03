@@ -1,5 +1,6 @@
 import type { BasicOperator } from '../types/calculator';
 import { ERROR_MESSAGES, DISPLAY_PRECISION } from './constants';
+import { power } from './scientific';
 
 /**
  * Format a number for display, handling precision and special cases
@@ -75,6 +76,8 @@ export function calculate(
       return multiply(a, b);
     case '/':
       return divide(a, b);
+    case '^':
+      return power(a, b);
     default:
       return ERROR_MESSAGES.INVALID_INPUT;
   }

@@ -1,0 +1,12 @@
+.scientificPanel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-sm, 8px);
+  padding: var(--spacing-md, 16px);
+  background-color: var(--bg-tertiary, #e8e8e8);
+}
+
+.angleModeButton {
+  grid-column: span 3;
+  font-weight: 600;
+}

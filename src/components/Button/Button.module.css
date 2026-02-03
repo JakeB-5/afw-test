@@ -1,0 +1,109 @@
+/* Base button styles */
+.button {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  user-select: none;
+  outline: none;
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Focus state for accessibility */
+.button:focus-visible {
+  box-shadow: 0 0 0 3px var(--focus-ring);
+  outline: none;
+}
+
+/* Active state */
+.button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Number variant */
+.number {
+  background-color: var(--btn-number-bg);
+  color: var(--btn-number-text);
+}
+
+.number:hover:not(:disabled) {
+  background-color: var(--btn-number-hover);
+}
+
+.number:active:not(:disabled) {
+  background-color: var(--btn-number-active);
+}
+
+/* Operator variant */
+.operator {
+  background-color: var(--btn-operator-bg);
+  color: var(--btn-operator-text);
+  font-weight: 600;
+}
+
+.operator:hover:not(:disabled) {
+  background-color: var(--btn-operator-hover);
+}
+
+.operator:active:not(:disabled) {
+  background-color: var(--btn-operator-active);
+}
+
+/* Function variant */
+.function {
+  background-color: var(--btn-function-bg);
+  color: var(--btn-function-text);
+}
+
+.function:hover:not(:disabled) {
+  background-color: var(--btn-function-hover);
+}
+
+.function:active:not(:disabled) {
+  background-color: var(--btn-function-active);
+}
+
+/* Scientific variant */
+.scientific {
+  background-color: var(--btn-scientific-bg);
+  color: var(--btn-scientific-text);
+  font-size: 1rem;
+}
+
+.scientific:hover:not(:disabled) {
+  background-color: var(--btn-scientific-hover);
+}
+
+.scientific:active:not(:disabled) {
+  background-color: var(--btn-scientific-active);
+}
+
+/* Equals variant */
+.equals {
+  background-color: var(--btn-equals-bg);
+  color: var(--btn-equals-text);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.equals:hover:not(:disabled) {
+  background-color: var(--btn-equals-hover);
+}
+
+.equals:active:not(:disabled) {
+  background-color: var(--btn-equals-active);
+}

@@ -1,5 +1,5 @@
 // Operator types
-export type BasicOperator = '+' | '-' | '*' | '/';
+export type BasicOperator = '+' | '-' | '*' | '/' | '^';
 export type ScientificOperator = 'sin' | 'cos' | 'tan' | 'ln' | 'log' | 'sqrt' | 'square' | 'reciprocal' | 'pow';
 export type Operator = BasicOperator | ScientificOperator;
 
