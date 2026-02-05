@@ -59,6 +59,11 @@
   transform: scale(0.95);
 }
 
+.icon {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
 /* Responsive design for mobile devices */
 @media (max-width: 480px) {
   .calculator {
